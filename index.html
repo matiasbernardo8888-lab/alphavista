@@ -179,6 +179,12 @@ a{color:#C9A86A}a:hover{color:#E4CC98}
   @keyframes rv{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:none}}
   header nav{backdrop-filter:none !important;-webkit-backdrop-filter:none !important;background:rgba(10,10,10,.88) !important}
 }
+
+/* ---------- Faixa (marquee) suave ---------- */
+.marquee{gap:0 !important;will-change:transform;backface-visibility:hidden;-webkit-backface-visibility:hidden}
+.marquee>span{padding-right:64px}
+@keyframes marq{from{transform:translate3d(0,0,0)}to{transform:translate3d(-50%,0,0)}}
+@media (max-width:900px),(hover:none){.marquee{animation-duration:70s !important}.marquee>span{padding-right:40px}.marquee .kw-neon{text-shadow:none}}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms !important;animation-delay:0s !important;transition-duration:.01ms !important}}
 </style></head>
 <body>
