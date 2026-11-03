@@ -8,7 +8,7 @@
 
   /* ---------- Scroll suave e inercial (Lenis) ---------- */
   var lenis = null;
-  if (window.Lenis && !reduced) {
+  if (window.Lenis && !reduced && finePointer) { // só no desktop: no celular o scroll nativo é mais leve
     lenis = new window.Lenis({ duration: 1.25, smoothWheel: true, wheelMultiplier: 0.9 });
     var raf = function (t) { lenis.raf(t); requestAnimationFrame(raf); };
     requestAnimationFrame(raf);
